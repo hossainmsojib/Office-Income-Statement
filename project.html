@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IYUB POTTERYWORKS - Accounting Sheet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>IYUB POTTERYWORKS (PVT) LTD</h1>
+        <div class="muted">Address: BSIC Nandanpur, Brahmanbaria</div>
+      </div>
+      <div class="actions-right">
+        <button id="exportBtn" class="small-btn">Export CSV</button>
+        <button id="clearBtn" class="small-btn ghost">Clear All</button>
+      </div>
+    </header>
+
+    <!-- Labour Table -->
+    <section class="card" id="labourCard">
+      <div class="flex-between">
+        <h3>Labour Payment</h3>
+        <div class="table-actions"><button id="addLabour">Add Labour</button></div>
+      </div>
+      <table id="labourTable">
+        <thead>
+          <tr><th>Name</th><th>Post</th><th>Basic Salary</th><th>Over Time</th><th>Total Income</th><th>Action</th></tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr><th colspan="4">Total Labour Cost</th><th id="labourTotal">0</th><th></th></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Materials Table -->
+    <section class="card" id="materialsCard">
+      <div class="flex-between">
+        <h3>Raw Materials</h3>
+        <div class="table-actions"><button id="addMaterial">Add Material</button></div>
+      </div>
+      <table id="materialsTable">
+        <thead>
+          <tr><th>Material Name</th><th>Quantity</th><th>Total Cost</th><th>Action</th></tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr><th colspan="2">Total Materials Cost</th><th id="materialsTotal">0</th><th></th></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Expenses Table -->
+    <section class="card" id="expensesCard">
+      <div class="flex-between">
+        <h3>Extra Expenses (1–40)</h3>
+        <div class="table-actions"><button id="addExpense">+ Add Custom Expense</button></div>
+      </div>
+      <table id="expensesTable">
+        <thead>
+          <tr><th>No.</th><th>Description</th><th>Amount</th><th>Action</th></tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr><th colspan="2">Total Extra Expenses</th><th id="expensesTotal">0</th><th></th></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Orders Table -->
+    <section class="card" id="ordersCard">
+      <div class="flex-between">
+        <h3>Order List</h3>
+        <div class="table-actions"><button id="addOrder">Add Order</button></div>
+      </div>
+      <table id="ordersTable">
+        <thead>
+          <tr><th>Order No.</th><th>Customer Name</th><th>Product</th><th>Quantity</th><th>Price</th><th>Total</th><th>Action</th></tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr><th colspan="5">Total Orders Income</th><th id="ordersTotal">0</th><th></th></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Summary -->
+    <section class="card">
+      <h3>Income & Expense Summary</h3>
+      <div class="summary">
+        <div class="item"><div class="muted">Total Labour Cost</div><div id="sumLabour">0</div></div>
+        <div class="item"><div class="muted">Total Materials Cost</div><div id="sumMaterials">0</div></div>
+        <div class="item"><div class="muted">Total Extra Expenses</div><div id="sumExpenses">0</div></div>
+        <div class="item"><div class="muted">Total Orders Income</div><div id="sumOrders">0</div></div>
+        <div class="item"><div class="muted">Net Profit / Loss</div><div id="netProfit">0</div></div>
+      </div>
+    </section>
+
+    <footer class="muted">Tip: all your data is auto-saved in the browser. Refresh the page, and your entries remain. You can export all data as CSV.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

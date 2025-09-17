@@ -1,0 +1,174 @@
+/* ===========================
+   General Styles
+=========================== */
+:root {
+  --primary: #1f2937;        /* Dark gray buttons */
+  --primary-hover: #3b82f6;  /* Blue hover */
+  --bg: #f4f6f8;             /* Light gray background */
+  --card: #ffffff;            /* White cards */
+  --text: #111827;            /* Dark text */
+  --muted: #6b7280;           /* Gray muted text */
+  --positive: #16a34a;        /* Green for profit */
+  --negative: #dc2626;        /* Red for loss */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 28px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   Header - Centered
+=========================== */
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 600;
+}
+
+header .muted {
+  color: var(--muted);
+  font-size: 15px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ===========================
+   Cards
+=========================== */
+.card {
+  background: lightblue;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.086);
+  transition: transform 0.2s, box-shadow 0.4s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.259);
+}
+
+/* ===========================
+   Buttons
+=========================== */
+button {
+  background: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+button:hover {
+  background: var(--primary-hover);
+  transform: scale(1.03);
+}
+button.ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* Small buttons */
+.small-btn {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+/* ===========================
+   Tables
+=========================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+}
+
+td {
+  background: #f9fafb;
+}
+
+tr:hover td {
+  background: #e0f2fe; /* subtle light blue hover */
+}
+
+/* ===========================
+   Inputs
+=========================== */
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: red;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
+  outline: none;
+}
+
+/* ===========================
+   Summary Boxes
+=========================== */
+.summary {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.summary .item {
+  flex: 1 1 180px;
+  background: turquoise;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.summary .item:hover {
+  transform: translateY(-3px);
+}
+
+.positive { color: var(--positive); }
+.negative { color: var(--negative); }
+
+/* ===========================
+   Misc
+=========================== */
+.muted { color: var(--muted); }
+.flex-between { display:flex; justify-content:space-between; align-items:center; }
+.table-actions { display:flex; gap:8px; }
+footer { font-size: 13px; color: var(--muted); margin-top: 8px; text-align:center; }
