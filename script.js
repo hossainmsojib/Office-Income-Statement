@@ -209,3 +209,4 @@ window.addEventListener('load', ()=>{
     if(expensesTbody.children.length===0) for(let i=1;i<=5;i++) addExpenseRow({no:i,desc:'',amt:0});
     if(ordersTbody.children.length===0) addOrderRow();
 });
+
